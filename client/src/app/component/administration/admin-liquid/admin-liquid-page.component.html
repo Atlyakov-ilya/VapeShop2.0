@@ -1,0 +1,106 @@
+<div class="add-liquid">
+    <h3>Добавить Жидкость</h3>
+  <form [formGroup]="liquidForm">
+    <div class="form-row">
+    <div class="form-group col-5">
+      <label for="brand">Брэнд:</label>
+      <input type="text"
+             id="brand"
+             class="form-control "
+             placeholder="Брэнд"
+             formControlName="brand"
+      />
+    </div>
+
+    <div class="form-group col-5 offset-2">
+      <label for="name">Название:</label>
+      <input type="text"
+             id="name"
+             class="form-control "
+             placeholder="Название"
+             formControlName="name"
+      />
+    </div>
+    </div>
+
+    <select formControlName="nicotine" class="custom-select custom-select-sm col-4">
+      <option selected>Никотин</option>
+      <option value="0">0 Мг</option>
+      <option value="3">3 Мг</option>
+      <option value="6">6 Мг</option>
+    </select>
+
+    <select formControlName="amount" class="custom-select custom-select-sm col-4 offset-3">
+      <option selected>Объём</option>
+      <option value="30">30 Мл</option>
+      <option value="60">60 Мл</option>
+      <option value="100">100 Мл</option>
+      <option value="120">120 Мл</option>
+    </select>
+
+    <select formControlName="composition" class="custom-select custom-select-sm col-4">
+      <option selected>Состав</option>
+      <option value="50/50">50/50</option>
+      <option value="60/40">60/40</option>
+      <option value="70/30">70/30</option>
+    </select>
+
+    <select formControlName="taste" class="custom-select custom-select-sm col-4 offset-3">
+      <option selected>Вкус</option>
+      <option value="Фрукты">Фрукты</option>
+      <option value="Выпечка">Выпечка</option>
+      <option value="Табачка">Табачка</option>
+    </select>
+
+      <label for="description"class="col-form-label col-form-label-sm">Описание</label>
+      <textarea name="description"
+                class="form-control col-10"
+                id="description"
+                rows="4"
+                placeholder="Описание"
+                formControlName="description"
+      ></textarea>
+
+
+    <div class="form-row">
+      <div class="form-group col-5">
+        <label for="price">Цена:</label>
+        <input type="text"
+               id="price"
+               class="form-control"
+               placeholder="Цена"
+               formControlName="price"
+        />
+      </div>
+
+      <div class="form-group col-5 offset-2">
+        <label for="quantity">Количество:</label>
+        <input type="text"
+               id="quantity"
+               class="form-control "
+               placeholder="Количество"
+               formControlName="quantity"
+        />
+      </div>
+    </div>
+
+
+    <label for="liquidFile">Загрузка картинки:</label>
+    <div class="form-group custom-file">
+      <input type="file"
+             class="custom-file-input"
+             id="liquidFile"
+             (change)="selectFile($event)"
+
+      >
+      <label class="custom-file-label" for="liquidFile">Выберите файл</label>
+    </div>
+
+    <div class="admin-button-right">
+    <button type="button"
+            class="btn btn-outline-dark"
+            (click)="save(liquidForm.value)"
+    >Загрузить</button>
+    </div>
+  </form>
+</div>

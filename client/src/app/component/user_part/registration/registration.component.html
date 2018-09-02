@@ -1,0 +1,156 @@
+<div class="regist">
+<div class="container">
+<img class="bear-baner" src="assets/images/bgimages/header_1.png">
+  <div class="row">
+  <i class="fa fa-home fa-lg" aria-hidden="true" routerLink="/home"></i>
+  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+  <div class="benefits">
+    <div class="decorated-title-wrapper">
+      <div class="decorated-title">
+        <h1>Регистрация</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <form [formGroup]="form">
+    <div class="form-group">
+      <label for="name">Имя</label>
+        <input type="text"
+               id="name"
+               class="form-control col-6"
+               placeholder="Имя"
+               formControlName="firstName"
+        />
+    </div>
+
+    <div *ngIf="form.get('firstName').invalid && form.get('firstName').touched" class="col-6 alert alert-danger">
+      <span *ngIf="form.get('firstName').errors['required']">Поле Имя не может быть пустым</span>
+      <span *ngIf="form.get('firstName').errors['minlength']">Поле Имя не может быть меньше 3 символов</span>
+    </div>
+
+    <div class="form-group">
+      <label for="firstName">Фамилия</label>
+      <input type="text"
+             id="firstName"
+             class="form-control col-6"
+             placeholder="Фамилия"
+             formControlName="lastName"
+      />
+    </div>
+
+    <div *ngIf="form.get('lastName').invalid && form.get('lastName').touched" class="col-6 alert alert-danger">
+      <span *ngIf="form.get('lastName').errors['required']">Поле Фамилия не может быть пустым</span>
+      <span *ngIf="form.get('lastName').errors['minlength']">Поле Фамилия не может быть меньше 3 символов</span>
+    </div>
+
+    <div class="form-group">
+      <label for="phoneNumber">Контактный телефон</label>
+      <input type="text"
+             id="phoneNumber"
+             class="form-control col-6"
+             placeholder="Контактный телефон"
+             formControlName="phoneNumber"
+      />
+    </div>
+
+    <div *ngIf="form.get('phoneNumber').invalid && form.get('phoneNumber').touched" class="col-6 alert alert-danger">
+      <span *ngIf="form.get('phoneNumber').errors['required']">Поле Контактный телефон не может быть пустым</span>
+      <span *ngIf="form.get('phoneNumber').errors['pattern']">Некоректный Контактный телефон</span>
+    </div>
+
+    <div class="form-group">
+      <label for="mail">Email</label>
+      <input type="email"
+             id="mail"
+             class="form-control col-6"
+             placeholder="Email"
+             formControlName="email"
+      />
+    </div>
+
+    <div *ngIf="form.get('email').invalid && form.get('email').touched" class="col-6 alert alert-danger">
+      <span *ngIf="form.get('email').errors['required']">Поле Email не может быть пустым</span>
+      <span *ngIf="form.get('email').errors['pattern']">Некоректный Email</span>
+    </div>
+
+    <div class="form-group">
+      <label for="verifymail">Подтвердить Email</label>
+      <input type="email"
+             id="verifymail"
+             class="form-control col-6"
+             placeholder="Подтвердить Email"
+             formControlName="verifyEmail"
+      />
+    </div>
+
+    <div *ngIf="form.get('verifyEmail').invalid && form.get('verifyEmail').touched" class="col-6 alert alert-danger">
+      <span *ngIf="form.get('verifyEmail').errors['required']">Повторите Email</span>
+      <span *ngIf="form.get('verifyEmail').errors['pattern']">Некоректный Email</span>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input"
+             type="checkbox"
+             value=""
+             id="defaultCheck1"
+             formControlName="subscribeToNews"
+      >
+      <label class="form-check-label" for="defaultCheck1">
+        <b>Подписаться на новости магазина</b>
+      </label>
+    </div><br/>
+
+    <div class="form-group">
+      <label for="pass">Пароль</label>
+      <input type="password"
+             id="pass"
+             class="form-control col-6"
+             placeholder="Пароль"
+             formControlName="password"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="repeatPassword">Повторить пароль</label>
+      <input type="password"
+             id="repeatPassword"
+             class="form-control col-6"
+             placeholder="Повторить пароль"
+             formControlName="verifyPassword"
+      />
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input"
+             type="checkbox"
+             value=""
+             id="data"
+             formControlName="personalData"
+
+      >
+      <label class="form-check-label" for="data">
+        <b>Согласие на обработку персональных данных</b><br/>
+        Настоящим подтверждаю, что я ознакомлен и согласен с условиями
+      </label>
+    </div><br/>
+
+    <div class="row registration">
+      <p><input type="image" src="assets/images/buttons/registration_1.png"
+              onmouseover="this.src='assets/images/buttons/registration_2.png';"
+              onmouseout="this.src='assets/images/buttons/registration_1.png';"
+                (click)="registrationNewUser()"
+
+      /></p>
+      <p><a routerLink="/home" ><img src="assets/images/buttons/i_have_account_1.png"
+              onmouseover="this.src='assets/images/buttons/i_have_account_2.png';"
+              onmouseout="this.src='assets/images/buttons/i_have_account_1.png';"
+      /></a></p>
+    </div>
+
+  </form>
+
+
+</div>
+</div>

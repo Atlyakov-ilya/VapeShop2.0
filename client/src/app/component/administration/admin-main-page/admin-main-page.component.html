@@ -1,0 +1,60 @@
+<div class="admin-main-page">
+   <div class="container">
+     <h2 class="admin-title">Администрирование</h2>
+      <div class="row">
+     <div class="col-6">
+        <div class="admin-list-title">
+          <h5>Товары</h5>
+        </div>
+       <div class="row">
+       <div class="col-3 admin-list-left">
+         <p>Жидкости</p>
+         </div>
+         <div class="offset-3">
+           <i class="fa fa-plus" routerLink="/admin/liquid" aria-hidden="true"></i> Добавить
+           <i class="fa fa-list-ol" routerLink="/admin/liquids" aria-hidden="true"></i> Список
+         </div>
+       </div>
+         <hr/>
+
+       <div class="row">
+         <div class="col-3 admin-list-left">
+           <p>Мехмоды</p>
+         </div>
+         <div class="offset-3">
+           <i class="fa fa-plus" routerLink="/admin/mechanical_mod" aria-hidden="true"></i> Добавить
+           <i class="fa fa-list-ol" routerLink="/admin/mechanical_mods" aria-hidden="true"></i> Список
+         </div>
+       </div>
+       <hr/>
+
+       <div class="row">
+         <div class="col-3 admin-list-left">
+           <p>Дрипки</p>
+         </div>
+         <div class="offset-3">
+           <i class="fa fa-plus" routerLink="/admin/rda" aria-hidden="true"></i> Добавить
+           <i class="fa fa-list-ol" routerLink="/admin/rdas" aria-hidden="true"></i> Список
+         </div>
+       </div>
+       <hr/>
+
+       <div class="row">
+         <div class="col-3 admin-list-left">
+           <p>Аккумуляторы</p>
+         </div>
+         <div class="offset-3">
+           <i class="fa fa-plus" routerLink="/admin/accumulator" aria-hidden="true"></i> Добавить
+           <i class="fa fa-list-ol" routerLink="/admin/accumulators" aria-hidden="true"></i> Список
+         </div>
+       </div>
+       <hr/>
+     </div>
+
+
+     <div class="col-6">
+       <router-outlet></router-outlet>
+     </div>
+      </div>
+   </div>
+</div>

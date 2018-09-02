@@ -1,0 +1,35 @@
+.admin-main-page{
+  background-color: #ebebeb;
+  height: 1000px;
+}
+
+.admin-title{
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+/*ITEM-INFO*/
+.admin-list-title{
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  color: white;
+  padding-left: 15px;
+  padding-top: 7px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.admin-list-left {
+  padding-left: 15px;
+  padding-top: 4px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.fa-plus{
+  color: black;
+  cursor: pointer;
+}
+.fa-list-ol{
+  color: black;
+  cursor: pointer;
+ }

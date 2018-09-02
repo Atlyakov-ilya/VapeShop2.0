@@ -1,0 +1,50 @@
+.news{
+  background-color: #ebebeb;
+  height: 1400px;
+}
+
+.a{
+  height: 100px;
+  background-color: #666666;
+}
+
+.b{
+  height: 100px;
+  background-color: #FB000D;
+}
+
+.c{
+  height: 100px;
+  background-color: #3085a3;
+}
+.test{
+  width: 550px;
+  height: 380px;
+  padding: 5px;
+}
+.test2{
+  width: 270px;
+  height: 150px;
+  padding-top: 5px;
+}
+
+.test4{
+  width: 125px;
+  height: 105px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+.right-part-name{
+  height: 500px;
+}
+
+
+.right-part-name p{
+  text-align: center;
+  font-size: 12px;
+  float: right;
+  word-wrap: break-word;
+}
+.archive{
+  padding-top: 47px;
+}

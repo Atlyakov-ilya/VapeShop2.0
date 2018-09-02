@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+.item-card{
+  background-color: #ebebeb;
+  height: auto;
+}
+
+.title{
+  padding-left: 20px;
+}
+
+.article{
+  text-align: right;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.image-item{
+  height: 388px;
+  width: 375px;
+  padding-left: 20px;
+  padding-bottom: 30px;
+}
+
+.count{
+  padding-left: 15px;
+}
+
+.in_basket{
+  padding-top: 20px;
+}
+
+/*Item-quantity (in style.css)*/
+input {
+  width: 80px;
+  outline: none;
+  border: none;
+  padding-left: 20px;
+  background-color:#ebebeb;
+}
+
+/*ITEM-INFO*/
+.item-info{
+  width: 750px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  size: 1.5em;
+  padding-left: 90px;
+  padding-top: 7px;
+  font-family: 'Oswald', sans-serif;
+}
+.cursor{
+  cursor: pointer;
+}

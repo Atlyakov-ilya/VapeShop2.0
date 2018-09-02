@@ -1,0 +1,224 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+.fa{
+  color: white;
+  padding: 10px;
+  font-size: 1.1em;
+}
+
+
+.panel p{
+  color: white;
+  font-size: 25px;
+  padding-top: 8px;
+  padding-left: 15px;
+  font-family: 'Oswald', sans-serif;
+  cursor: pointer;
+}
+
+.back{
+  padding: 20px;
+}
+
+.fa-home{
+  color: black;
+  padding: 8px;
+  font-size: 3em;
+  cursor: pointer;
+  font-weight: bold;
+
+}
+.fa-arrow-right{
+  color: black;
+  font-size: 1em;
+  padding-right: 10px;
+}
+
+.benefits h1{
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+  color: black;
+  cursor: pointer;
+}
+
+.decorated-title-wrapper {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #FB000D;
+}
+
+/*Item-quantity*/
+.item-increment{
+  padding-left: 12px;
+}
+
+.item-increment div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#decrement, #increment {
+  cursor: pointer;
+  font-weight: bold;
+  background-color:#ebebeb;
+}
+
+.item-increment .fa{
+  color: black;
+  font-size: 1.7em;
+}
+
+.wrapper {
+  width: 50px;
+  overflow: hidden;
+}
+
+
+/*Pagination*/
+
+.pagination a {
+  color: black;
+  transition: background-color .3s;
+  background-color: #ebebeb;
+}
+
+.pagination .fa-arrow-left {
+  color: black;
+  padding: 0;
+  font-size: 0.8em;
+}
+
+.pagination .fa-arrow-right {
+  color: black;
+  padding: 0;
+  font-size: 0.8em;
+}
+
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+/*!!!!!!!!!!CATALOG!!!!!!!!!!!!*/
+.catalog{
+  background-color: #ebebeb;
+  height: 1700px;
+}
+
+.image-in-catalog{
+  width: 210px;
+  height: 190px;
+  padding: 10px;
+  padding-left: 35px;
+}
+
+
+/*Catalog-Navigation*/
+
+.catalog-title {
+  background-color: black;
+  height: 35px;
+  width: 250px;
+
+}
+
+.catalog-title h4{
+  padding-top: 1px;
+  padding-left: 20px;
+  color: #ebebeb;
+}
+
+.navigation p{
+  color: #4A4840;
+  font-size: 25px;
+  padding-top: 5px;
+  padding-left: 15px;
+}
+
+/*Catalog-Items*/
+.card{
+  background: #ebebeb none repeat scroll 0 0;
+  border: 1px solid #c0c0c0;
+  height: 390px;
+  width: 264px;
+  overflow: hidden;
+  padding: 25px 15px;
+  position: relative;
+  text-align: center;
+  transition: all 0.5s ease 0s;
+  margin-bottom: 20px;
+}
+
+.card-img-top{
+  height: 210px;
+}
+
+.card-body{
+  font-size: 20px;
+}
+/*-------------CATALOG-------------*/
+
+
+/*!!!!!!!!!!!!!!!ADMIN!!!!!!!!!!!!!!!!!!!!*/
+
+.admin-list-item{
+  height: auto;
+}
+
+.admin-button-right{
+  padding: 15px;
+  float: right;
+}
+.admin-error{
+  color: red;
+  font-size: 80%;
+}
+
+/*List of Items and order*/
+.image-in-order{
+  width: 110px;
+  height: 120px;
+  padding: 5px;
+}
+.item-description-in-order {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.title-in-order{
+  text-align: left;
+  padding-top: 10px;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.fa-pencil {
+  color: black;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.admin-search{
+  color: black;
+  font-size: 2.2em;
+  cursor: pointer;
+}
+
+.item-change-delete{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.item-change-delete .fa{
+  padding-top: 5px;
+  padding-bottom: 10px;
+  font-size: 1.2em;
+  color: black;
+  cursor: pointer;
+}
+

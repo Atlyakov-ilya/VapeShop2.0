@@ -1,0 +1,50 @@
+<form class="form-inline">
+  <div class="form-group offset-6">
+    <label for="searchMechanicalMod"><i class="fa fa-search admin-search" aria-hidden="true"></i></label>
+    <input type="text"
+           id="searchMechanicalMod"
+           class="form-control form-control-sm"
+           [(ngModel)]="searchMechanicalMod"
+           [ngModelOptions]="{standalone: true}"
+    />
+  </div>
+</form>
+
+<div class="admin-list-item">
+  <div class="row justify-content-between">
+    <div class="liquid"
+         *ngFor="let mod of  mechanicalMods
+       | adminMechanicalModFilter: searchMechanicalMod: 'brand': 'name': 'diameter': 'material': 'price'
+       | paginate: { itemsPerPage: 3, currentPage: p }; let i = index">
+      <div class="row">
+        <div class="col-3">
+          <div class="panel-body">
+            <img class="image-in-order" src="{{mod.fileName}}"/>
+          </div>
+        </div>
+        <div class="col-6 item-description-in-order">
+          <p>Бренд:{{mod.brand}} Название:{{mod.name}}</p>
+          <p>Диаметр:{{mod.diameter}}мм Материал:{{mod.material}}</p>
+          <p>Цена:{{mod.price}}BYN Вналичии:{{mod.quantity}}ШТ</p>
+        </div>
+        <div class="col-3 centered">
+          <div class="item-change-delete">
+            <div class="row">
+              <i class="fa fa-pencil" aria-hidden="true"
+                 [routerLink]="['/admin/mechanical_mod', mod.mechanicalModId]"></i>
+              <p>Изменить</p>
+            </div>
+          </div>
+          <div class="item-change-delete">
+            <div class="row">
+              <i class="fa fa-times" aria-hidden="true" (click)="deleteMechanicalModById(mod.mechanicalModId)"></i>
+              <p>Удалить</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr/>
+    </div>
+  </div>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

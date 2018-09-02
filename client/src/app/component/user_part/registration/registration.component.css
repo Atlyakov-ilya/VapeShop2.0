@@ -1,0 +1,24 @@
+.regist{
+  background-color: #ebebeb;
+  height: auto;
+}
+
+.fa-home{
+  color: black;
+  padding: 5px;
+  font-size: 1.5em;
+}
+.fa-arrow-right{
+  color: black;
+  padding: 5px;
+  font-size: 1em;
+}
+a{
+  text-decoration: none;
+}
+
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+

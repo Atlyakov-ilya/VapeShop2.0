@@ -1,0 +1,69 @@
+<div class="catalog">
+  <div class="container">
+
+    <img class="bear-baner" src="assets/images/bgimages/header_1.png">
+    <div class="panel" [ngStyle]="{'background-image': getUrl()}">
+      <div class="row">
+        <div class="col-md-2 offset-md-1"><p routerLink="/catalog/liquids">ЖИДКОСТИ</p></div>
+        <div class="col-md-2"><p routerLink="/catalog/mechanical_mods">МЕХМОДЫ</p></div>
+        <div class="col-md-2"><p routerLink="/catalog/rdas">ДРИПКИ</p></div>
+        <div class="col-md-2"><p routerLink="/catalog/accumulators">КОМПЛЕКТУЮЩИЕ</p></div>
+        <div class="col-md-2 offset-md-1"><p>АКЦИИ</p></div>
+      </div>
+    </div>
+
+    <div class="back">
+      <div class="row">
+        <i class="fa fa-home fa-lg" aria-hidden="true" routerLink="/home"></i>
+        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        <div class="benefits">
+          <div class="decorated-title-wrapper">
+            <div class="decorated-title">
+              <h1>Каталог</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-3">
+        <div class="navigation">
+          <div class="catalog-title">
+            <h4>Каталог</h4>
+          </div>
+          <p>Жидкость</p>
+          <div class="catalog-title">
+            <h4>Фильтр</h4>
+          </div>
+          <p>Цена</p>
+          <p>Бренд</p>
+          <p>Вкус</p>
+          <p>Объем</p>
+        </div>
+      </div>
+
+      <div class="col-md-9 col-md-offset-3">
+        <div class="row">
+          <div class="col-md-4"
+               *ngFor="let liquid of liquids
+               | paginate: { itemsPerPage: 2, currentPage: p }">
+            <div class="card">
+              <img class="image-in-catalog" src="{{liquid.liquidFileName}}" routerLink="/item_card"/>
+              <div class="card-body">
+                <h5 class="card-title">{{liquid.name}}</h5>
+                <h6 class="card-text">{{liquid.brand}}</h6>
+                <p><img src="assets/images/buttons/in_basket_1_small.png"
+                        onmouseover="this.src='assets/images/buttons/in_basket_2_small.png';"
+                        onmouseout="this.src='assets/images/buttons/in_basket_1_small.png';"
+                /></p>
+              </div>
+            </div>
+          </div>
+    </div>
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>
+  </div>
+</div>

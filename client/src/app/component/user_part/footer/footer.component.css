@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+.centered{
+  text-align: center;
+}
+
+footer{
+  height: 255px;
+  background: black;
+  font-family: 'Oswald', sans-serif;
+}
+input{
+  background-color:#666;
+  outline:none;
+  border-color:#666 ;
+}
+
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
+  text-align: center;
+}
+
+h4,h5{
+  padding-top: 10px;
+  color: white;
+  font-style: oblique;
+}

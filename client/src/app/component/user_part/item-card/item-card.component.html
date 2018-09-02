@@ -1,0 +1,118 @@
+<div class="item-card">
+  <div class="container">
+    <img class="bear-baner" src="assets/images/bgimages/header_1.png">
+    <div class="panel" [ngStyle]="{'background-image': getUrl()}">
+      <div class="row">
+        <div class="col-md-2 offset-md-1"><p>ЖИДКОСТИ</p></div>
+        <div class="col-md-2"><p>МЕХМОДЫ</p></div>
+        <div class="col-md-2"><p>ДРИПКИ</p></div>
+        <div class="col-md-2"><p>КОМПЛЕКТУЮЩИЕ</p></div>
+        <div class="col-md-2 offset-md-1"><p>АКЦИИ</p></div>
+      </div>
+    </div>
+
+    <div class="back">
+      <div class="row">
+        <i class="fa fa-home fa-lg" aria-hidden="true" routerLink="/home"></i>
+        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        <div class="benefits">
+          <div class="decorated-title-wrapper">
+            <div class="decorated-title">
+              <h1 routerLink="/catalog">Каталог</h1>
+            </div>
+          </div>
+        </div>
+        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        <div class="benefits">
+          <div class="decorated-title-wrapper">
+            <div class="decorated-title">
+              <h1>Карточка товаров</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--CARD-->
+    <div class="row">
+      <div class="col-md-4">
+        <div class="row">
+        <h1 class="title">Tea Time</h1>
+            <img class="image-item" src="assets/images/item/liquid/large_full_514.jpg" />
+        </div>
+
+
+      </div>
+      <div class="col-md-8 col-md-offset-4">
+        <p class="article">Артикл: 00001</p>
+        <h2>Цена: 10р</h2>
+          <div class="row">
+            <h2 class="count">Кол-во:</h2>
+            <div class="col-md-3 col-md-offset-6">
+                <div class="item-increment">
+                  <div id="decrement">
+                    <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                  </div>
+                  <div class="wrapper"><input type="number"
+                                              class="input-text qty text"
+                                              step="1" min="1" max=""
+                                              name="quantity_12730"
+                                              value="1"
+                                              title="Кол-во" size="4"
+                                              pattern="[0-9]*" inputmode="numeric"></div>
+                  <div id="increment">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                  </div>
+                </div>
+            </div>
+          </div>
+        <p><img class="in_basket" routerLink="/basket" src="assets/images/buttons/in_basket_big_1.png"
+                onmouseover="this.src='assets/images/buttons/in-basket_big_2.png';"
+                onmouseout="this.src='assets/images/buttons/in_basket_big_1.png';"
+        /></p>
+        <!--Item-info-->
+        <div class="item-info">
+              <div class="row">
+                <div class="col-md-4 cursor">
+                  <a data-toggle="collapse" data-target="#description"
+                     aria-expanded="false" aria-controls="description">ОПИСАНИЕ</a>
+                </div>
+                <div class="col-md-4 cursor">
+                  <a data-toggle="collapse" data-target="#characteristics"
+                     aria-expanded="false" aria-controls="characteristics">ХАРАКТЕРИСТИКИ</a></div>
+                <div class="col-md-4 cursor">ОТЗЫВЫ</div>
+              </div>
+        </div>
+        <!--Dynamic-info-->
+        <div id="description" class="collapse show">
+          <div class="card-body">
+            <p>Кукурузные хлопья с сиропом и клубничным джемом от именитого европейского производителя</p>
+          </div>
+        </div>
+        <div id="characteristics" class="collapsing">
+          <div class="card-body">
+            <table class="table table-bordered">
+              <thead>
+              <tr>
+                <th scope="col">Бранд</th>
+                <th scope="col">PG/VG</th>
+                <th scope="col">ВКУС</th>
+                <th scope="col">Страна</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>DINNER LADY</td>
+                <td>70/30</td>
+                <td>ДЕСЕРТ, ХЛОПЬЯ</td>
+                <td>АНГЛИЯ</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>

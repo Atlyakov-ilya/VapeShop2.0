@@ -1,0 +1,50 @@
+<form class="form-inline">
+  <div class="form-group offset-6">
+      <label for="searchAccumulator"><i class="fa fa-search admin-search" aria-hidden="true"></i></label>
+      <input type="text"
+             id="searchAccumulator"
+             class="form-control form-control-sm"
+             [(ngModel)]="searchAccumulator"
+             [ngModelOptions]="{standalone: true}"
+      />
+    </div>
+</form>
+
+<div class="admin-list-item">
+  <div class="row justify-content-between">
+    <div class="liquid"
+         *ngFor="let acc of accumulators
+         | adminAccumulatorFilter: searchAccumulator: 'brand': 'name': 'format': 'capacity': 'price'
+         | paginate: { itemsPerPage: 3, currentPage: p }; let i = index">
+      <div class="row">
+    <div class="col-3">
+      <img class="image-in-order" src="{{acc.fileName}}"/>
+    </div>
+
+    <div class="col-6 item-description-in-order">
+      <p>Бренд:{{acc.brand}} Название:{{acc.name}}</p>
+      <p>Формат:{{acc.format}} Ёмкость:{{acc.capacity}}</p>
+      <p>Цена:{{acc.price}} Вналичии:{{acc.quantity}}</p>
+    </div>
+
+    <div class="col-3 centered">
+      <div class="item-change-delete">
+      <div class="row">
+      <i class="fa fa-pencil" aria-hidden="true"
+         [routerLink]="['/admin/accumulator', acc.accumulatorId]"></i>
+      <p>Изменить</p>
+      </div>
+      </div>
+      <div class="item-change-delete">
+        <div class="row">
+        <i class="fa fa-times" aria-hidden="true" (click)="deleteAccumulatorById(acc.accumulatorId)"></i>
+        <p>Удалить</p>
+        </div>
+      </div>
+    </div>
+  </div>
+      <hr/>
+  </div>
+  </div>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+.navbar-nav .nav-link{
+  font-family: 'Oswald', sans-serif;
+  color: white;
+}
+
+.right-part{
+  text-align: right;
+}
+
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}

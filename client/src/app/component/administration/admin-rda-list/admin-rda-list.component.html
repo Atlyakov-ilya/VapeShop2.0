@@ -1,0 +1,51 @@
+<form class="form-inline">
+  <div class="form-group offset-6">
+    <label for="searchMechanicalMod"><i class="fa fa-search admin-search" aria-hidden="true"></i></label>
+    <input type="text"
+           id="searchMechanicalMod"
+           class="form-control form-control-sm"
+           [(ngModel)]="searchRDA"
+           [ngModelOptions]="{standalone: true}"
+    />
+  </div>
+</form>
+
+<div class="admin-list-item">
+  <div class="row justify-content-between">
+    <div class="liquid"
+         *ngFor="let rda of  RDAs
+       | adminRdaFilter: searchRDA: 'brand': 'name': 'diameter': 'material': 'price'
+       | paginate: { itemsPerPage: 3, currentPage: p }; let i = index">
+      <div class="row">
+        <div class="col-3">
+          <div class="panel-body">
+            <img class="image-in-order" src="{{rda.fileName}}"/>
+          </div>
+        </div>
+        <div class="col-6 item-description-in-order">
+          <p>Бренд:{{rda.brand}} Название:{{rda.name}}</p>
+          <p>Диаметр:{{rda.diameter}}мм Материал:{{rda.material}}</p>
+          <p>Цена:{{rda.price}}BYN Вналичии:{{rda.quantity}}ШТ</p>
+        </div>
+        <div class="col-3 centered">
+          <div class="item-change-delete">
+            <div class="row">
+              <i class="fa fa-pencil" aria-hidden="true"
+                 [routerLink]="['/admin/rda', rda.rdaId]"></i>
+              <p>Изменить</p>
+            </div>
+          </div>
+          <div class="item-change-delete">
+            <div class="row">
+              <i class="fa fa-times" aria-hidden="true" (click)="deleteRDAById(rda.rdaId)"></i>
+              <p>Удалить</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr/>
+    </div>
+  </div>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+

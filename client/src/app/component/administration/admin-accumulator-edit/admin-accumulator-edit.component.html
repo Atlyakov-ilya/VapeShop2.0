@@ -1,0 +1,104 @@
+<div class="add-accumulator">
+  <h3>Редактировать Аккумулятор</h3>
+  <form #accumulatorForm="ngForm">
+    <div class="form-row">
+      <div class="form-group col-5">
+        <label for="brand">Брэнд:</label>
+        <input type="text"
+               id="brand"
+               class="form-control "
+               [(ngModel)]="accumulator.brand"
+               #brand="ngModel"
+               [ngModelOptions]="{standalone: true}"
+        />
+      </div>
+      <div class="form-group col-5 offset-2">
+        <label for="nameOfModel">Название:</label>
+        <input type="text"
+               id="nameOfModel"
+               class="form-control "
+               [(ngModel)]="accumulator.name"
+               #name="ngModel"
+               [ngModelOptions]="{standalone: true}"
+        />
+      </div>
+    </div>
+
+      <select class="custom-select custom-select-sm col-4"
+              [(ngModel)]="accumulator.format"
+              #format="ngModel"
+              [ngModelOptions]="{standalone: true}"
+      >
+        <option selected>{{accumulator.format}}</option>
+        <option value="18650">18650</option>
+        <option value="26650">26650</option>
+      </select>
+
+      <select class="custom-select custom-select-sm col-4 offset-3"
+              [(ngModel)]="accumulator.capacity"
+              #capacity="ngModel"
+              [ngModelOptions]="{standalone: true}"
+      >
+        <option selected>{{accumulator.capacity}}</option>
+        <option value="2100mAh">2100mAh</option>
+        <option value="2500mAh">2500mAh</option>
+        <option value="3000mAh">3000mAh</option>
+        <option value="3400mAh">3400mAh</option>
+        <option value="4000mAh">4000mAh</option>
+      </select>
+
+      <label for="description"class="col-form-label col-form-label-sm">Описание</label>
+      <textarea name="description"
+                class="form-control col-10"
+                id="description"
+                rows="4"
+                placeholder="Описание"
+                [(ngModel)]="accumulator.description"
+                #description="ngModel"
+                [ngModelOptions]="{standalone: true}"
+      ></textarea>
+
+    <div class="form-row">
+      <div class="form-group col-5">
+        <label for="price">Цена:</label>
+        <input type="text"
+               id="price"
+               class="form-control"
+               placeholder="Цена"
+               [(ngModel)]="accumulator.price"
+               #price="ngModel"
+               [ngModelOptions]="{standalone: true}"
+        />
+      </div>
+
+      <div class="form-group col-5 offset-2">
+        <label for="quantity">Количество:</label>
+        <input type="text"
+               id="quantity"
+               class="form-control "
+               placeholder="Количество"
+               [(ngModel)]="accumulator.quantity"
+               #quantity="ngModel"
+               [ngModelOptions]="{standalone: true}"
+        />
+      </div>
+    </div>
+
+    <label for="accumulatorFile">Загрузка картинки:</label>
+    <div class="form-group custom-file">
+      <input type="file"
+             class="custom-file-input"
+             id="accumulatorFile"
+             (change)="selectFile($event)"
+
+      >
+      <label class="custom-file-label" for="accumulatorFile">Выберите файл</label>
+    </div>
+
+    <div class="admin-button-right">
+      <button type="button"
+              class="btn btn-outline-dark"
+              (click)="update( accumulator )">Изменить</button>
+    </div>
+  </form>
+</div>
